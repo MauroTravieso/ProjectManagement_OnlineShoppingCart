@@ -1,8 +1,9 @@
 package org.system.admin.model;
 
-//import org.hibernate.validator.constraints.Email;
+//import org.hibernaate.validator.constraints.Email;
 //import org.hibernate.validator.constraints.NotEmpty;
 
+import lombok.Data;
 import org.system.role.model.Role;
 import org.system.task.model.Task;
 
@@ -12,6 +13,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.util.List;
 
+@Data
 @Entity
 public class User {
 
@@ -40,44 +42,4 @@ public class User {
         this.password = password;
     }
 
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public List<Task> getTasks() {
-        return tasks;
-    }
-
-    public void setTasks(List<Task> tasks) {
-        this.tasks = tasks;
-    }
-
-    public List<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
-    }
 }
